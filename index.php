@@ -4,21 +4,17 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!--=============== FAVICON ===============-->
    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-   <!--=============== REMIXICONS ===============-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-
-   <!--=============== CSS ===============-->
+   <!-- Icon remixicon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="">
+   <!-- Custom CSS -->
    <link rel="stylesheet" href="assets/css/styles.css?v=<?php echo time(); ?>">
 
    <title>Fadlan Al Falah Baihaqi – Portfolio</title>
 </head>
 
 <body>
-   <!--==================== HEADER ====================-->
+   <!-- Header -->
    <header class="header" id="header">
       <nav class="nav container">
          <a href="#" class="nav__logo">
@@ -33,7 +29,7 @@
 
             <ul class="nav__list">
                <li class="nav__item">
-                  <a href="#home" class="nav__link">Beranda</a>
+                  <a href="#home" class="nav__link active-link">Beranda</a>
                </li>
 
                <li class="nav__item">
@@ -49,7 +45,7 @@
                </li>
 
                <li class="nav__item">
-                  <a href="#contact" class="nav__link">Kontak</a>
+                  <a href="#contact" class="nav__link nav__link-button">Kontak</a>
                </li>
             </ul>
 
@@ -59,7 +55,10 @@
             </div>
          </div>
 
-         <div class="nav__bouttons">
+         <div class="nav__buttons">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
             <!-- Toogle button -->
             <div class="nav__toggle" id="nav-toggle">
                <i class="ri-menu-4-line"></i>
@@ -68,9 +67,9 @@
       </nav>
    </header>
 
-   <!--==================== MAIN ====================-->
+   <!-- Main -->
    <main class="main">
-      <!--==================== HOME ====================-->
+      <!-- Home -->
       <section class="home section" id="home">
          <div class="home__container container grid">
             <h1 class="home__name">
@@ -110,6 +109,12 @@
                   berkualitas untuk kebutuhan bisnis.
                </p>
 
+               <div class="home__buttons">
+                  <a href="uploads/cv/CV Fadlan Al Falah Baihaqi.pdf" class="button" download>
+                     <i class="ri-download-2-line"></i> Download CV
+                  </a>
+               </div>
+
                <a href="#about" class="home__scroll">
                   <div class="home__scroll-box">
                      <i class="ri-arrow-down-s-line"></i>
@@ -123,7 +128,7 @@
          </div>
       </section>
 
-      <!--==================== ABOUT ====================-->
+      <!-- About -->
       <section class="about section" id="about">
          <div class="about__container container grid">
             <h2 class="section__title-1">
@@ -149,8 +154,13 @@
 
                <ul class="about__list">
                   <li class="about__item">
-                     <b>Keahlian Saya:</b> CodeIgniter 4, Laravel Filament 3, Flutter,
-                     MySQL, REST API, UI/UX Dashboard, Git & GitHub, dan manajemen server dasar.
+                     <i class="ri-php-line" role="img" aria-label="PHP"></i>
+                  </li>
+                  <li class="about__item">
+                     <i class="ri-javascript-line" role="img" aria-label="JavaScript"></i>
+                  </li>
+                  <li class="about__item">
+                     <i class="ri-flutter-line" role="img" aria-label="Flutter"></i>
                   </li>
                </ul>
 
@@ -158,16 +168,12 @@
                   <a href="#contact" class="button">
                      <i class="ri-send-plane-line"></i> Kontak
                   </a>
-
-                  <a href="https://www.linkedin.com/" target="_blank" class="button__ghost">
-                     <i class="ri-linkedin-box-line"></i>
-                  </a>
                </div>
             </div>
          </div>
       </section>
 
-      <!--==================== SERVICES ====================-->
+      <!-- Services -->
       <section class="services section" id="services">
          <h2 class="section__title-2">
             <span>Layanan.</span>
@@ -232,14 +238,20 @@
          </div>
       </section>
 
-      <!--==================== PROJECTS ====================-->
+      <!-- Projects -->
       <section class="projects section" id="projects">
          <h2 class="section__title-1">
             <span>Projects.</span>
          </h2>
 
+         <div class="projects__filters container">
+            <button type="button" class="projects__filter is-active" data-filter="all">Semua</button>
+            <button type="button" class="projects__filter" data-filter="website">Website</button>
+            <button type="button" class="projects__filter" data-filter="app">App</button>
+         </div>
+
          <div class="projects__container container grid">
-            <articel class="projects__card">
+            <article class="projects__card" data-category="website">
                <div class="projects__image">
                   <img src="assets/img/project-1.png" alt="image" class="projects__img">
 
@@ -263,9 +275,9 @@
                      <i class="ri-github-line"></i> Lihat
                   </a>
                </div>
-            </articel>
+            </article>
 
-            <articel class="projects__card">
+            <articel class="projects__card" data-category="website">
                <div class="projects__image">
                   <img src="assets/img/project-2.png" alt="image" class="projects__img">
 
@@ -290,7 +302,7 @@
                </div>
             </articel>
 
-            <articel class="projects__card">
+            <articel class="projects__card" data-category="app">
                <div class="projects__image">
                   <img src="assets/img/project-3.png" alt="image" class="projects__img">
 
@@ -317,7 +329,7 @@
          </div>
       </section>
 
-      <!--==================== CONTACT ====================-->
+      <!-- Contact -->
       <section class="contact section" id="contact">
          <div class="contact__container grid">
             <div class="contact__data">
@@ -335,76 +347,77 @@
 
                <div class="geometric-box"></div>
             </div>
-         </div>
 
-         <div class="contact__mail">
-            <h2 class="contact__title">
-               Kirimkan Pesan Anda
-            </h2>
+            <div class="contact__mail">
+               <h2 class="contact__title">
+                  Kirimkan Pesan Anda
+               </h2>
 
-            <form action="" class="contact__form" id="contact-form">
-               <div class="contact__group">
-                  <div class="contact__box">
-                     <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Nama Lengkap">
-                     <label for="name" class="contact__label">Nama Lengkap</label>
+               <form action="" class="contact__form" id="contact-form">
+                  <div class="contact__group">
+                     <div class="contact__box">
+                        <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Nama Lengkap">
+                        <label for="name" class="contact__label">Nama Lengkap</label>
+                     </div>
+
+                     <div class="contact__box">
+                        <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email">
+                        <label for="email" class="contact__label">Email</label>
+                     </div>
                   </div>
 
                   <div class="contact__box">
-                     <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email">
-                     <label for="email" class="contact__label">Email</label>
+                     <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subjek">
+                     <label for="subject" class="contact__label">Subjek</label>
                   </div>
-               </div>
 
-               <div class="contact__box">
-                  <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subjek">
-                  <label for="subject" class="contact__label">Subjek</label>
-               </div>
+                  <div class="contact__box contact__area">
+                     <textarea name="user_message" id="message" class="contact__input" required placeholder="Pesan"></textarea>
+                     <label for="message" class="contact__label">Pesan</label>
+                  </div>
 
-               <div class="contact__box contact__area">
-                  <textarea name="user_message" id="message" class="contact__input" required placeholder="Pesan"></textarea>
-                  <label for="message" class="contact__label">Pesan</label>
-               </div>
+                  <p class="contact__message" id="contact-message"></p>
 
-               <p class="contact__message" id="contact-message"></p>
+                  <button type="submit" class="contact__button button">
+                     <i class="ri-send-plane-line"></i> Kirim Pesan
+                  </button>
+               </form>
+            </div>
 
-               <button type="submit" class="contact__button button">
-                  <i class="ri-send-plane-line"></i> Kirim Pesan
-               </button>
-            </form>
-         </div>
+            <div class="contact__social">
+               <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
 
-         <div class="contact__social">
-            <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
+               <div class="contact__social-data">
+                  <div>
+                     <p class="contact__social-description-1">
+                        Tidak ingin mengirim email?
+                     </p>
+                     <p class="contact__social-description-2">
+                        Anda bisa menghubungi saya lewat media sosial.
+                     </p>
+                  </div>
 
-            <div class="contact__social-data">
-               <div>
-                  <p class="contact__social-description-1">
-                     Tidak ingin mengirim email?
-                  </p>
-                  <p class="contact__social-description-2">
-                     Anda bisa menghubungi saya lewat media sosial.
-                  </p>
-               </div>
+                  <div class="contact__social-links">
+                     <a href="https://www.facebook.com/" target="_blank" class="contact__social-link">
+                        <i class="ri-facebook-line"></i>
+                     </a>
 
-               <div class="contact__social-links">
-                  <a href="https://www.facebook.com/" target="_blank" class="contact__social-link">
-                     <i class="ri-facebook-line"></i>
-                  </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="contact__social-link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
 
-                  <a href="https://www.instagram.com/" target="_blank" class="contact__social-link">
-                     <i class="ri-instagram-line"></i>
-                  </a>
-
-                  <a href="https://www.linkedin.com/" target="_blank" class="contact__social-link">
-                     <i class="ri-linkedin-box-line"></i>
-                  </a>
+                     <a href="https://www.linkedin.com/" target="_blank" class="contact__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
                </div>
             </div>
+
          </div>
       </section>
    </main>
 
-   <!--==================== FOOTER ====================-->
+   <!-- Footer -->
    <footer class="footer">
       <div class="footer__container container grid">
          <ul class="footer__links">
@@ -428,21 +441,21 @@
       </div>
    </footer>
 
-   <!--========== SCROLL UP ==========-->
+   <!-- Scroll up -->
    <a href="#" class="scrollup" id="scroll-up">
       <i class="ri-arrow-up-s-line"></i>
    </a>
 
-   <!--=============== SCROLLREVEAL ===============-->
-   <script src=""></script>
+   <!-- Scrollreveal -->
+   <script src="assets/js/scrollreveal.min.js"></script>
 
-   <!--=============== EMAIL JS ===============-->
+   <!-- Email js -->
    <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
    </script>
 
-   <!--=============== MAIN JS ===============-->
+   <!-- Script js -->
    <script src="assets/js/main.js?v=<?php echo time(); ?>"></script>
 </body>
 
