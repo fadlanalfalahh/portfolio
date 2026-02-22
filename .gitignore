@@ -1,43 +1,69 @@
-# SYSTEM FILES
-# File otomatis dari sistem operasi (tidak perlu di repo)
-# macOS
+# System files
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
 
-# EDITOR & IDE
-# File konfigurasi lokal editor atau IDE
+# Editor / IDE
 .vscode/
+!.vscode/settings.json
+.idea/
+*.iml
 
-# LOG FILES
-# File log sementara
+# Log Files
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# DEPENDENCIES
-# Folder dependency (kalau nanti pakai Node / build tools)
+# Environmet
+.env*
+
+# Dependency
+# Composer
+/vendor/
+# Node
 node_modules/
-vendor/
 
-# ENVIRONMENT / SECRET
-# File konfigurasi sensitif
-.env
-.env.*
-*.env
-
-# BUILD / CACHE
-# File hasil build atau cache
+# Build / Cache
 dist/
 build/
 .cache/
+coverage/
 
-# PROJECT SPECIFIC
+# Laravel specific
+/storage/*.key
+/storage/app/*
+/storage/framework/*
+/storage/logs/*
+/bootstrap/cache/*
+!/storage/framework/.gitignore
+!/storage/logs/.gitignore
+!/storage/app/.gitignore
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+/android/app/debug
+/android/app/profile
+/android/app/release
+app.*.symbols
+app.*.map.json
+.swiftpm/
+
+# PHP Native
+/uploads/
+/public/uploads/
+config/koneksi.php
+
+# Project specific
+migrate_working_dir/
+*.class
+*.pyc
+
 # File yang tidak ingin masuk repo
 Text Responsive portfolio Rian.txt
+
+# Folder yang tidak ingin masuk repo
